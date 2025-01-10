@@ -37,3 +37,9 @@ A full-stack booking management system built with **Next.js**, **Prisma ORM**, a
    ```bash
    npm run dev
 7. Open your browser and navigate to http://localhost:3000.
+
+## Usage
+- Navigate to the Samara Booking Dashboard.
+- Create new bookings using the "Create Booking" button.
+- View a list of all bookings with pagination controls.
+- Edit or delete existing bookings using the available action buttons.
