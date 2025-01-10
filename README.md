@@ -21,7 +21,7 @@ A full-stack booking management system built with **Next.js**, **Prisma ORM**, a
    ```bash
    git clone https://github.com/your-username/your-repo-name.git
    
-## Navigate to the project directory:
+2. Navigate to the project directory:
 - cd your-repo-name
 ## Install dependencies:
 - npm install
