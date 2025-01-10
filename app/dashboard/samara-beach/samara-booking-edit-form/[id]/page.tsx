@@ -3,13 +3,12 @@ import { notFound } from "next/navigation";
 import { getBookingById } from "@/lib/action/SaramaAction";
 import SamaraBookingEditForm from "@/components/dashboard/forms/SaramaBookingEditForm";
 
-// Use the correct typing for props
 interface Props {
   params: { id: string };
 }
 
 const SamaraBookingEditFormPage = async ({ params }: Props) => {
-  const { id } = params;
+  const id = params.id;
 
   // Fetch the booking data by ID
   const booking = await getBookingById(id);
@@ -21,7 +20,7 @@ const SamaraBookingEditFormPage = async ({ params }: Props) => {
   // Format the booking date
   const formattedBooking = {
     ...booking,
-    date: booking.date.toISOString().split("T")[0],
+    date: booking.date.toISOString().split("T")[0], // Format the date
   };
 
   return (
