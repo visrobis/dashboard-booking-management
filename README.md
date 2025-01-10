@@ -22,13 +22,18 @@ A full-stack booking management system built with **Next.js**, **Prisma ORM**, a
    git clone https://github.com/your-username/your-repo-name.git
    
 2. Navigate to the project directory:
-- cd your-repo-name
-## Install dependencies:
-- npm install
-## Set up the environment variables in a .env file:
-- DATABASE_URL=mysql://user:password@localhost:3306/samara_booking_db
-## Apply database migrations:
-- npx prisma migrate dev
-## Start the development server:
-- npm run dev
-## Open your browser and navigate to http://localhost:3000.
+   ```bash
+   cd your-repo-name
+3. Install dependencies:
+   ```bash
+   npm install
+4. Set up the environment variables in a .env file:
+   ```bash
+   DATABASE_URL=mysql://user:password@localhost:3306/samara_booking_db
+5. Apply database migrations:
+   ```bash
+   npx prisma migrate dev
+6. Start the development server:
+   ```bash
+   npm run dev
+7. Open your browser and navigate to http://localhost:3000.
