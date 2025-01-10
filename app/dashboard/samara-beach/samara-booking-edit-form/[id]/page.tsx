@@ -1,25 +1,27 @@
-"use server";
-import SamaraBookingEditForm from "@/components/dashboard/forms/SaramaBookingEditForm";
-import { getBookingById } from "@/lib/action/SaramaAction";
-import { notFound } from "next/navigation";
 import React from "react";
+import { notFound } from "next/navigation";
+import { getBookingById } from "@/lib/action/SaramaAction";
+import SamaraBookingEditForm from "@/components/dashboard/forms/SaramaBookingEditForm";
 
-const SamaraBookingEditFormPage = async ({
-  params,
-}: {
+// Use the correct typing for props
+interface Props {
   params: { id: string };
-}) => {
-  const id = params.id;
+}
+
+const SamaraBookingEditFormPage = async ({ params }: Props) => {
+  const { id } = params;
+
+  // Fetch the booking data by ID
   const booking = await getBookingById(id);
 
   if (!booking) {
-    notFound();
+    notFound(); // Handle 404 if booking not found
   }
 
-  // Convert date fields to string in 'YYYY-MM-DD' format
+  // Format the booking date
   const formattedBooking = {
     ...booking,
-    date: booking.date.toISOString().split("T")[0], // Format the date
+    date: booking.date.toISOString().split("T")[0],
   };
 
   return (
