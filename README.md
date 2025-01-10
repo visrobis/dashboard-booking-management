@@ -43,3 +43,13 @@ A full-stack booking management system built with **Next.js**, **Prisma ORM**, a
 - Create new bookings using the "Create Booking" button.
 - View a list of all bookings with pagination controls.
 - Edit or delete existing bookings using the available action buttons.
+
+## Contribution
+Contributions, issues, and feature requests are welcome! Feel free to check the issues page.
+
+License
+This project is licensed under the MIT License.
+
+Author
+Elvis Robis
+Portfolio | Email
